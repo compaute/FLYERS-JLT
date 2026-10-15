@@ -414,7 +414,7 @@ function startWalk(){
     <div class="btns"><button class="btn" id="kCancel">Annuler</button><button class="btn rec" id="kGo">Démarrer</button></div>
     ${NATIVE?'':'<button class="link" id="kGpx" style="margin-top:6px">Écran verrouillé ? Importer un tracé GPX d’une autre appli</button>'}`;
   $('kCancel').onclick=showHome;if($('kGpx'))$('kGpx').onclick=pickGpx;
-  $('kGo').onclick=()=>withPos(beginWalk);
+  $('kGo').onclick=()=>withPos(()=>beginWalk());
 }
 const TKEY='flyers-tournee-en-cours';
 function saveTrack(){try{localStorage.setItem(TKEY,JSON.stringify({t0,pts:track.map(p=>[p.lat,p.lng])}))}catch(e){}}
