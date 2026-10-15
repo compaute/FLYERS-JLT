@@ -1,0 +1,6 @@
+{
+  "appId": "fr.compaute.carteflyers",
+  "appName": "Carte Flyers",
+  "webDir": "www",
+  "android": { "useLegacyBridge": true }
+}
